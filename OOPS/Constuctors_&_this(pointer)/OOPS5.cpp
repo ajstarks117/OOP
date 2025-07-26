@@ -12,6 +12,11 @@ public:
         this->cgpa = cgpa;
     }
 
+    student(student &obj){
+        this->name = obj.name;
+        this->cgpa = obj.cgpa;  //user defined copy constuctor.
+    }
+
     void getInfo(){
         cout << "Name: " << name << endl <<"CGPA: " << cgpa << endl;
     }

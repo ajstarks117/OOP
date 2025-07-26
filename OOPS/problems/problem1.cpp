@@ -12,7 +12,7 @@ private:
 public:
     void get_details() {
         cout << "Enter Book ID: ";
-        cin >> bookId;
+        cin >> bookId; 
         cin.ignore(); // Clear newline from buffer
         cout << "Enter Book Name: ";
         getline(cin, bookName);
@@ -43,12 +43,17 @@ int main() {
         b[i].get_details();
     }
 
+    // Print header before printing details
     cout << "\nBook Details:\n";
     cout << left << setw(10) << "Book ID"
          << setw(20) << "Book Name"
          << setw(20) << "Author Name"
          << setw(10) << "Price" << endl;
     cout << string(60, '-') << endl;
+    for(int i = 0; i < 3; i++) {
+        b[i].print_details();
+        totalPrice += b[i].get_price();
+    }
 
     for(int i = 0; i < 3; i++) {
         b[i].print_details();

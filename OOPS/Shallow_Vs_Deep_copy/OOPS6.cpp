@@ -15,6 +15,8 @@ public:
          
     }
 
+    
+
     void getInfo(){
         cout << "Name: " << name << endl <<"CGPA: " << *cgpaPtr << endl;
     }
